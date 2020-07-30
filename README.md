@@ -24,4 +24,11 @@ Field | Contents | Abbreviation
 `bioproject` | BioProject Accession | PRJNA########
 
 
-## Counting all runs associated with a s
+## Counting all runs associated with a study accession
+Submitted by: Rob Edwards
+
+Run accession: [SRP216273](https://trace.ncbi.nlm.nih.gov/Traces/study/?acc=SRP216273&o=acc_s%3Aa)
+
+```
+select count(acc) from `nih-sra-datastore.sra.metadata` where sra_study = 'SRP216273';
+```
